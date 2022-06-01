@@ -1,1 +1,43 @@
-<p>second-challenge works!</p>
+<h1>Desafio 2: Construindo Objetivos</h1>
+<p>Escreva uma solução eficiente, no qual recebe duas Strings, <strong>objetivo</strong> e <strong>material</strong>, onde
+com os dados de <strong>material</strong> você consiga construir o <strong>objetivo</strong>. Cada letra de <strong>material</strong> só deve ser usada uma única vez para o <strong>objetivo</strong>.</p>
+<p>Exemplos:</p>
+
+<p><strong>Input</strong>:</p>
+<p><strong>Objetivo</strong> = "<span class="red">a</span>"</p>
+<p><strong>Material</strong> = "<span class="red">b</span>"</p>
+<p><strong>Resultado</strong>: <span class="red">false</span></p>
+
+<p><strong>Input</strong>:</p>
+<p><strong>Objetivo</strong> = "<span class="green">a</span><span class="red">a</span>"</p>
+<p><strong>Material</strong> = "<span class="green">a</span><span class="red">b</span>"</p>
+<p><strong>Resultado</strong>: <span class="red">false</span></p>
+
+<p><strong>Input</strong>:</p>
+<p><strong>Objetivo</strong> = "<span class="green">a</span><span class="green">a</span>"</p>
+<p><strong>Material</strong> = "<span class="green">a</span><span class="red">b</span><span class="green">a</span>"</p>
+<p><strong>Resultado</strong>: <span class="green">true</span></p>
+
+<form class="form" (ngSubmit)="submit()" [formGroup]="secondChallengeForm">
+    <div class="form__inputs">
+        <div class="form-field">
+            <label>Objetivo: </label>
+            <input maxlength="10" formControlName="firstString" type="text"/>
+        </div>
+        
+        <div class="form-field">
+            <label>Material: </label>
+            <input maxlength="10" formControlName="secondString" type="text"/>
+        </div>
+        
+    </div>
+
+    <div class="form__results">
+        <button [disabled]="!isFormValid" type="submit" class="submit-result-button">executar</button>
+
+        <ng-container *ngIf="challengeResult">
+            <p>O resultado é: </p>
+            <span class="red">{{ challengeResult }}</span>
+        </ng-container>
+    </div>
+</form>
