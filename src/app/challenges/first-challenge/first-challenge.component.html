@@ -1,0 +1,37 @@
+<h1>Desafio 1: Manipulando Arrays</h1>
+<p>Escreva uma solução eficiente, no qual recebe uma listagem de Strings e encontra o maior prefixo comum dentro dessa listagem, caso não encontre nenhum, deve-se retornar uma string vazia.</p>
+<p>Exemplo:</p>
+<p><strong>Input</strong>: strings = ["<span class="red">aba</span>cate", "<span class="red">aba</span>caxi", "<span class="red">aba</span>ixo"]</p>
+<p><strong>Resultado</strong>: "<span class="red">aba</span>"</p>
+<p><strong>Input</strong>: strings = ["<span class="red">ca</span>sa", "<span class="red">ca</span>samento", "<span class="red">ca</span>melo"]</p>
+<p><strong>Resultado</strong>: "<span class="red">ca</span>"</p>
+<p><strong>Input</strong>: strings = ["abacate", "casamento", "flor"]</p>
+<p><strong>Resultado</strong>: ""</p>
+
+<form class="form" (ngSubmit)="submit()" [formGroup]="firstChallengeForm">
+    <div class="form__inputs">
+        <div class="form-field">
+            <label>String 1: </label>
+            <input maxlength="10" formControlName="firstString" type="text"/>
+        </div>
+        
+        <div class="form-field">
+            <label>String 2: </label>
+            <input maxlength="10" formControlName="secondString" type="text"/>
+        </div>
+        
+        <div class="form-field">
+            <label>String 3: </label>
+            <input maxlength="10" formControlName="thirdString" type="text"/>
+        </div>
+    </div>
+
+    <div class="form__results">
+        <button [disabled]="!isFormValid" type="submit" class="submit-result-button">executar</button>
+
+        <ng-container *ngIf="challengeResult">
+            <p>O resultado é: </p>
+            <span class="red">{{ challengeResult }}</span>
+        </ng-container>
+    </div>
+</form>

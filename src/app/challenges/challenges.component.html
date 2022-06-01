@@ -1,0 +1,20 @@
+<!-- <app-stepper [currentStep]="currentChallenge"></app-stepper> -->
+
+<ng-container [ngSwitch]="currentChallenge">
+    <ng-container *ngSwitchCase="0">
+        <h1>olá, esse é o desafio da melhor coordenadoria! :)</h1>
+        <p>vamos começar?</p>
+    </ng-container>
+    <app-first-challenge *ngSwitchCase="1"></app-first-challenge>
+    <app-second-challenge *ngSwitchCase="2"></app-second-challenge>
+    <app-third-challenge *ngSwitchCase="3"></app-third-challenge>
+    <app-fourth-challenge *ngSwitchCase="4"></app-fourth-challenge>
+    <app-fifth-challenge *ngSwitchCase="5"></app-fifth-challenge>
+    <app-sixth-challenge *ngSwitchCase="6"></app-sixth-challenge>
+</ng-container>
+
+<div>
+    <button (click)="back()" class="alternate-button" *ngIf="!isFirstChallenge">anterior</button>
+    <button (click)="next()" class="action-button" *ngIf="!isLastChallenge">próximo</button>
+</div>
+

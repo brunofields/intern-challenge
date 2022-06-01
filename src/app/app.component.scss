@@ -1,0 +1,15 @@
+@import '../styles/shared.scss';
+
+div {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 12px;
+    padding: 24px;
+    border-top: 18px solid $default-orange;
+
+    img {
+        margin: 0 auto;
+        width: 55px;
+    }
+}

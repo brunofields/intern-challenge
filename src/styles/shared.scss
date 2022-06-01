@@ -1,0 +1,65 @@
+@import 'normalize/normalize.scss';
+@import 'variables/variables.scss';
+@import 'fonts/fonts.scss';
+
+
+button {
+    margin: 0 10px;
+}
+
+button:first-of-type {
+    margin-left: 0;
+}
+
+button:last-of-type {
+    margin-right: 0;
+}
+
+.alternate-button {
+    border: 1px solid $stepper-button-blue;
+    color: $stepper-button-blue;
+    font-weight: 600;
+    padding: 16px 24px;
+    border-radius: 6px;
+    width: 100%;
+    margin-top: 16px;
+}
+
+.action-button {
+    background-color: $default-orange;
+    color: white;
+    font-weight: 600;
+    padding: 16px 24px;
+    border-radius: 6px;
+    width: 100%;
+    margin-top: 16px;
+
+}
+
+.submit-result-button {
+    background-color: green;
+    color: white;
+    font-weight: 600;
+    padding: 16px 24px;
+    border-radius: 6px;
+    width: 100%;
+    margin: 8px 0 8px
+}
+
+.submit-result-button:disabled {
+    background-color: gray;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    label {
+        margin: 0 0 8px;
+    }
+    input {
+        padding: 8px;
+        border-radius: 6px;
+        border: 1px solid black;
+        margin-bottom: 8px;
+    }
+}
